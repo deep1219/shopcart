@@ -38,6 +38,7 @@
 	<td><%= p.getPrice() %></td>
 	<td><%= p.getSeller() %></td>
 	<td><a href=<%="delete.jsp?id=" + p.getId()%>><img src= "Images/delete.png" alt="delete" /></a></td>
+	<td><a href= "update.jsp"><img src ="Images/edit.png" alt="edit" /></a></td>
 </tr>
 <%
 	}
