@@ -14,19 +14,20 @@ import com.demo.model.Product;
 public class ProductService
 {
 	Connection con;
-	//Properties prop = new Properties();
-	//InputStream input = null;
+	Properties prop = new Properties();
+	InputStream input = null;
 	public ProductService()
 	{
 		try
 		{
-			//input = new FileInputStream("C:\\Users\\Deep\\workspace\\shopcart\\config.properties");
-			//prop.load(input);
+//			input = new FileInputStream("config.properties");
+			prop.load(getClass().getResourceAsStream("config.properties"));
+			
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			@SuppressWarnings("unused")
-			String url = "jdbc:mysql://localhost:3306/feb2019";
-			String username = "root";
-			String password = "Akash@19";
+			String url = prop.getProperty("url");
+			String username = prop.getProperty("username");
+			String password = prop.getProperty("password");
 			con = DriverManager.getConnection(url, username, password);
 			//con = DriverManager.getConnection("jdbc:mysql://localhost:3306/feb2019", "root", "root");
 			
