@@ -20,7 +20,7 @@ public class ProductService
 	{
 		try
 		{
-			input = new FileInputStream("C:\\Users\\Deep\\workspace\\shopcart\\config.properties");
+			input = new FileInputStream("shopcart\\config.properties");
 			prop.load(input);
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			@SuppressWarnings("unused")
