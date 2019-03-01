@@ -26,7 +26,7 @@ public class ProductService
 			@SuppressWarnings("unused")
 			String url = "jdbc:mysql://localhost:3306/feb2019";
 			String username = "root";
-			String password = "root";
+			String password = "Akash@19";
 			con = DriverManager.getConnection(url, username, password);
 			//con = DriverManager.getConnection("jdbc:mysql://localhost:3306/feb2019", "root", "root");
 			
